@@ -86,10 +86,4 @@ loan_eligibility_predictor/
 Feel free to connect with me on www.linkedin.com/in/parimala-tejaswi for feedback or collaboration!
 
 
-Let me know if you want me to:
-
-- Customize it with your **GitHub username/LinkedIn
-- Help write a **LinkedIn post** using this
-
-You're doing awesome — this `README` adds a big professional touch to your profile! 💼📢
 
