@@ -55,7 +55,7 @@ Given applicant details such as income, education, credit history, etc., predict
 
 🌐 Live Demo
 
-👉 https://loan-eligibility-predictor-a3nqlsxgchd72dzbx3jhvo.streamlit.app/
+👉 https://loan-eligibility-predictor-chvlkxctam4tyzuukvbyed.streamlit.app/
 
 
 
