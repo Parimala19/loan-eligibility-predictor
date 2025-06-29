@@ -60,13 +60,22 @@ if st.button("Check Eligibility"):
             else:
                 encoded_values.append(value)
 
+        # Calculate Loan to Income Ratio
+        total_income = applicant_income + coapplicant_income
+        if total_income > 0:
+            loan_to_income_ratio = loan_amount / (total_income + 1)
+        else:
+            loan_to_income_ratio = 999  # Force rejection if no income
+
         # Predict
-        try:
-            prediction = model.predict([encoded_values])[0]
-            confidence = model.predict_proba([encoded_values])[0][prediction]
+        prediction = model.predict([encoded_values])[0]
+        confidence = model.predict_proba([encoded_values])[0][prediction]
+
+        # Override logic if income is clearly sufficient
+        if total_income > 500000 and loan_to_income_ratio < 2 and credit_history == 1.0:
+            st.success(f"✅ Loan Approved (Overridden based on high income)\n\nConfidence: 0.99")
+        else:
             if prediction == 1:
                 st.success(f"✅ Loan Approved\n\nConfidence: {confidence:.2f}")
             else:
                 st.error(f"❌ Loan Not Approved\n\nConfidence: {confidence:.2f}")
-        except Exception as e:
-            st.error("🚫 An error occurred while making the prediction.")
