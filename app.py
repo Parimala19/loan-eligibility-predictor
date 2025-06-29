@@ -72,8 +72,8 @@ if st.button("Check Eligibility"):
         confidence = model.predict_proba([encoded_values])[0][prediction]
 
         # Override logic if income is clearly sufficient
-        if total_income > 500000 and loan_to_income_ratio < 2 and credit_history == 1.0:
-            st.success(f"✅ Loan Approved (Overridden based on high income)\n\nConfidence: 0.99")
+        if total_income > 1000000 and loan_to_income_ratio < 2.5 and credit_history == 1.0:
+            st.success("✅ Loan Approved (Overridden based on high income)\n\nConfidence: 0.99")
         else:
             if prediction == 1:
                 st.success(f"✅ Loan Approved\n\nConfidence: {confidence:.2f}")
