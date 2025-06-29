@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 # Load model and encoder
-model = pickle.load(open("loadmodel.pkl", "rb"))
+model = pickle.load(open("load_model.pkl", "rb"))
 encoder = pickle.load(open("encoder.pkl", "rb"))
 
 st.set_page_config(page_title="🏦 Loan Eligibility Predictor", page_icon="💰")
