@@ -1,6 +1,6 @@
 import streamlit as st
 import joblib
-import numpy as np
+import pandas as pd
 
 # Load the model pipeline
 model = joblib.load("loan_model.pkl")
@@ -38,7 +38,7 @@ if st.button("Check Eligibility"):
         'Property_Area': property_area
     }
 
-    input_df = [input_data]
+    input_df = pd.DataFrame([input_data])  # ✅ Correct format for prediction
     prediction = model.predict(input_df)[0]
     confidence = model.predict_proba(input_df)[0][prediction]
 
