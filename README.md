@@ -1,6 +1,4 @@
-Of course, Tejaswi! Here's a **professional, polished `README.md` file** for your **Loan Eligibility Predictor** project — perfect for GitHub and LinkedIn sharing. 📄✨
 
----
 
 📘 `README.md` — *Loan Eligibility Predictor*
 
